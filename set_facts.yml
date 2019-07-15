@@ -20,7 +20,7 @@
   
   
   - set_fact: 
-      cached_interfaces: interfaces 
+      cached_interfaces: interfaces.stdout.0
       
       
   - debug: var=cached_interfaces
