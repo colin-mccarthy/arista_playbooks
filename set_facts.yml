@@ -1,0 +1,24 @@
+---
+- hosts: eos
+  gather_facts: no
+  connection: nework_cli
+
+      
+
+  tasks:
+  
+  - name: get the current name-server configs
+    eos_command:
+      commands:
+        - "show running-config | json"
+    register: get_config
+
+
+  - debug: var=get_config
+
+ # - name: set name-server commands
+ #   with_items: "{{ dns_servers }}"
+ #   eos_config:
+ #     lines:
+ #       - "{{ item }}"
+ #  register: set_dns
