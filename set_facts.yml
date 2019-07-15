@@ -9,6 +9,7 @@
   
   - name: get the current name-server configs
     eos_command:
+      authorize: yes
       commands:
         - "show interfaces | json"
     register: interfaces
