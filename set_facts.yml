@@ -10,15 +10,15 @@
   - name: get the current name-server configs
     eos_command:
       commands:
-        - "show running-config | json"
-    register: get_config
+        - "show interfaces | json"
+    register: interfaces
 
 
-  - debug: var=get_config
-
- # - name: set name-server commands
- #   with_items: "{{ dns_servers }}"
- #   eos_config:
- #     lines:
- #       - "{{ item }}"
- #  register: set_dns
+  - debug: var=interfaces
+  
+  
+  - set_fact: 
+      interfaces: cached_interfaces
+      
+      
+  - debug: var=cached_interfaces
