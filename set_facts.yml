@@ -8,7 +8,7 @@
 
   tasks:
   
-  - name: get the current name-server configs
+  - name: show interfaces
     eos_command:
       authorize: yes
       commands:
