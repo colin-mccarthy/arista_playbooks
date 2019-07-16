@@ -16,7 +16,7 @@
     register: interfaces
 
 
-  - debug: var=interfaces
+#  - debug: var=interfaces
   
   
   - set_fact: 
@@ -24,7 +24,7 @@
       
       
       
-  - debug: var=cached_interfaces
+ # - debug: var=cached_interfaces
   
   
   - debug: var=cached_interfaces.ansible_facts
