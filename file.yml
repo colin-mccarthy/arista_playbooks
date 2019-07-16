@@ -22,7 +22,7 @@
   - debug:
       msg: "{{ file_systems.stdout_lines[0].fileSystems | json_query(_q1) }}"
     vars:
-      _q1: "[?prefix=='certificate:'].{ size: size }"
+      _q1: "[?prefix=='flash:'].{ size: size }"
   
   
 #  - set_fact: 
