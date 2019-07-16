@@ -24,7 +24,7 @@
       
       
       
- # - debug: var=cached_interfaces
+  - debug: var=ansible_facts
   
   
   - debug: var=cached_interfaces.stdout.0.interfaces.Ethernet1.mtu
