@@ -27,4 +27,4 @@
  # - debug: var=cached_interfaces
   
   
-  - debug: var=cached_interfaces.ansible_facts
+  - debug: var=cached_interfaces.stdout
