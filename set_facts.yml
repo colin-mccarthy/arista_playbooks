@@ -3,6 +3,7 @@
   gather_facts: no
   connection: nework_cli
   become: yes
+  cacheable: true
 
       
 
