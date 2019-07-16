@@ -1,0 +1,13 @@
+---
+- hosts: eos
+  gather_facts: no
+  connection: nework_cli
+  become: yes
+
+      
+
+  tasks:
+  
+
+  
+  - debug: var=cached_interfaces.stdout.0.interfaces.Ethernet1.mtu
