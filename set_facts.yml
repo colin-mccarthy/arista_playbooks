@@ -27,4 +27,4 @@
  # - debug: var=cached_interfaces
   
   
-  - debug: var=cached_interfaces.stdout[interfaces].Ethernet1.mtu
+  - debug: var=cached_interfaces.stdout
