@@ -1,0 +1,31 @@
+---
+- hosts: eos
+  gather_facts: no
+  connection: nework_cli
+  become: yes
+
+
+      
+
+  tasks:
+  
+  - name: show file systems
+    eos_command:
+      authorize: yes
+      commands:
+        - "show file systems | json"
+    register: file_systems
+
+
+  - debug: var=file_systems
+  
+  
+#  - set_fact: 
+      cached_file_systems: "{{ file_systems }}"
+      cacheable: true
+      
+      
+  - debug: var=ansible_facts
+  
+  
+#  - debug: var=cached_interfaces.stdout.0.interfaces.Ethernet1.mtu
