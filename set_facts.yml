@@ -20,7 +20,8 @@
   
   
   - set_fact: 
-      cached_interfaces: interfaces.stdout
+      cached_interfaces: "{{ interfaces }}"
+      
       
       
   - debug: var=cached_interfaces
