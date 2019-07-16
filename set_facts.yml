@@ -3,7 +3,7 @@
   gather_facts: no
   connection: nework_cli
   become: yes
-  cacheable: true
+
 
       
 
@@ -22,7 +22,7 @@
   
   - set_fact: 
       cached_interfaces: "{{ interfaces }}"
-      
+      cacheable: true
       
       
   - debug: var=ansible_facts
