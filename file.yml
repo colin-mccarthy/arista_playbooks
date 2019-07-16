@@ -17,7 +17,12 @@
     register: file_systems
 
 
-  - debug: var=file_systems.stdout_lines[0].fileSystems | json_query('[*][?prefix=\"certifcate\"]') 
+#  - debug: var=file_systems.stdout_lines[0].fileSystems | json_query('[*][?prefix=\"certifcate\"]') 
+
+  - debug:
+      msg: "{{ file_systems.stdout_lines[0].fileSystems | json_query(_q1) }}"
+    vars:
+      _q1: "[*][?prefix='certifcate']"
   
   
 #  - set_fact: 
